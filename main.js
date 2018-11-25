@@ -7,6 +7,12 @@
 //   - インクリメントを繰り返し変数numの値が100以上になったらWhileループを抜ける
 //     - デベロッパーツールのConsole上に0~99までの値が出力されたら正解
 
+let num = 0;
+
+while(num < 100){
+    console.log(num);
+    num++;
+}
 
 // 課題2: 正解が出るまで問題を出し続ける入力ダイアログを表示する
 //   - 変数questionに問題文を代入する(ここでは「パンはパンでも食べられないパンは？」の文字列を代入する)
@@ -22,3 +28,20 @@
 //       - answerとinputの値が同じだったら「正解です！」とalertで表示する
 //     - 正解が出るまでpromptで問題文を出し続ける
 //     - 正解が出たらWhileループを抜ける
+
+const qustion = "パンはパンでも食べられないパンは？";
+const answer = "フライパン";
+let input = undefined;
+
+while(input !== answer){
+    input = prompt(qustion);
+
+    if(input === answer){
+        alert("正解です");
+    }
+    else{
+        alert("不正解です");
+    }
+}
+
+
